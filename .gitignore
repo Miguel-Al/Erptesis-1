@@ -34,3 +34,14 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+
+# ignore Emacs files
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
