@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: erptesis_production
-  username: postgres
-  password: '0000'
+  database: <%= ENV['DATABASE_URL'] %>
+  #username: postgres
+  #password: '0000'
