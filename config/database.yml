@@ -32,7 +32,7 @@ development:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: '0000'
+  password: '2315413'
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -61,7 +61,7 @@ test:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: '0000'
+  password: '2315413'
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -86,4 +86,4 @@ production:
   <<: *default
   database: erptesis_production
   username: postgres
-  password: '0000'
+  password: '2315413'
