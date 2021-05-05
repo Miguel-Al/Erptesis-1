@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validate :validate_username
 
+  validates :username, presence: true, uniqueness: true #esto permite que requieran poner nombre de usuario
+                                                        #y que no se repita poner el nombre de usuario.
+
   attr_writer :login 
 
   def login
