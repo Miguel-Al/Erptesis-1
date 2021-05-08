@@ -1,13 +1,15 @@
 class User < ApplicationRecord
+  belongs_to :rol
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validate :validate_username
 
+  validate :validate_username
   validates :username, presence: true, uniqueness: true #esto permite que requieran poner nombre de usuario
                                                         #y que no se repita poner el nombre de usuario.
 
+  scope :all_except, ->(user) { where.not(id: user) } #para buscar todos los usuarios menos el actual
   attr_writer :login 
 
   def login
@@ -30,3 +32,4 @@ class User < ApplicationRecord
   end
   
 end
+

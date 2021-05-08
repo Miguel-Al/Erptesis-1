@@ -1,0 +1,19 @@
+<h1>Lista de Usuarios</h1>
+	<%= link_to "Crear Usuario", new_user_registration_path , class: 'btn btn-default' %>
+<table id='usuario-tabla' class="table table-hover">
+            <thead  class="thead-light">
+             <tr>
+                <th>Usuario</th>
+                <th colspan="1"></th>
+              </tr>
+            </thead>            
+            <tbody>
+            <% @users.each do |user| %>
+                            <tr>
+                              <td><%= user.username %></td>
+			      <td><%= user.email %></td>
+			      <td><%= user.rol.nombre %></td>
+			      <td><%= link_to "Borrar", admin_destroy_user_path(user), method: :delete, data: { confirm: "Seguro?" } , class: 'btn btn-default' %></td></tr>
+			    <% end %>
+	    </tbody>
+</table>
