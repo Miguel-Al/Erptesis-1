@@ -76,4 +76,5 @@ Rails.application.configure do
 
   # Codigo el mailer de devise, no se si es necesario
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
 end
